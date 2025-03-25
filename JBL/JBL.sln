@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBL", "JBL\JBL.csproj", "{9B0F0D6F-8AEC-4623-AB97-07E4F9AE1E7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B0F0D6F-8AEC-4623-AB97-07E4F9AE1E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0F0D6F-8AEC-4623-AB97-07E4F9AE1E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0F0D6F-8AEC-4623-AB97-07E4F9AE1E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0F0D6F-8AEC-4623-AB97-07E4F9AE1E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F5FFB34-1595-4CE5-9586-3F22E9110B63}
+	EndGlobalSection
+EndGlobal

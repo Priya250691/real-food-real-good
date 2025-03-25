@@ -1,0 +1,596 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{107B47BD-D24A-42E6-B30E-C7F6C6AFD40C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JayBhavaniLocho</RootNamespace>
+    <AssemblyName>JayBhavaniLocho</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44341</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+	  <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="addToCart.aspx" />
+    <Content Include="changepass.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Display.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="img\about-1.jpg" />
+    <Content Include="img\about-2.jpg" />
+    <Content Include="img\about-3.jpg" />
+    <Content Include="img\about-4.jpg" />
+    <Content Include="img\bg-hero.jpg" />
+    <Content Include="img\hero.png" />
+    <Content Include="img\menu-1.jpg" />
+    <Content Include="img\menu-2.jpg" />
+    <Content Include="img\menu-3.jpg" />
+    <Content Include="img\menu-4.jpg" />
+    <Content Include="img\menu-5.jpg" />
+    <Content Include="img\menu-6.jpg" />
+    <Content Include="img\menu-7.jpg" />
+    <Content Include="img\menu-8.jpg" />
+    <Content Include="img\team-1.jpg" />
+    <Content Include="img\team-2.jpg" />
+    <Content Include="img\team-3.jpg" />
+    <Content Include="img\team-4.jpg" />
+    <Content Include="img\testimonial-1.jpg" />
+    <Content Include="img\testimonial-2.jpg" />
+    <Content Include="img\testimonial-3.jpg" />
+    <Content Include="img\testimonial-4.jpg" />
+    <Content Include="img\video.jpg" />
+    <Content Include="js\main.js" />
+    <Content Include="lib\animate\animate.css" />
+    <Content Include="lib\animate\animate.min.css" />
+    <Content Include="lib\counterup\counterup.min.js" />
+    <Content Include="lib\easing\easing.js" />
+    <Content Include="lib\easing\easing.min.js" />
+    <Content Include="lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="lib\owlcarousel\owl.carousel.js" />
+    <Content Include="lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="lib\tempusdominus\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="lib\tempusdominus\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="lib\tempusdominus\js\moment-timezone.min.js" />
+    <Content Include="lib\tempusdominus\js\moment.min.js" />
+    <Content Include="lib\tempusdominus\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="lib\tempusdominus\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="lib\waypoints\waypoints.min.js" />
+    <Content Include="lib\wow\wow.js" />
+    <Content Include="lib\wow\wow.min.js" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="menu.aspx" />
+    <Content Include="profileDetails.aspx" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\.gitignore" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\addCategory.aspx" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\addSnack.aspx" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\addSubCategory.aspx" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\css\style.css" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\dashboard\circle.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\dashboard\circle.svg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\dashboard\img_1.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\dashboard\img_2.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\dashboard\img_3.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\dashboard\img_4.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces-clipart\pic-1.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces-clipart\pic-2.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces-clipart\pic-3.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces-clipart\pic-4.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face1.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face10.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face11.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face12.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face13.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face14.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face15.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face16.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face17.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face18.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face19.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face2.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face20.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face21.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face22.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face23.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face24.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face25.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face26.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face27.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face3.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face4.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face5.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face6.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face7.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face8.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\faces\face9.jpg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\favicon.ico" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\favicon.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\logo-mini.svg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\logo.svg" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\sprites\blue.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\sprites\dark.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\sprites\flag.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\sprites\green.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\sprites\jsgrid-icons.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\sprites\red.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\images\sprites\yellow.png" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\chart.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\dashboard.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\file-upload.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\hoverable-collapse.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\jquery.cookie.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\misc.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\off-canvas.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\todo.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\js\todolist.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\chart.js\Chart.min.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\css\vendor.bundle.base.css" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\js\vendor.bundle.base.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\basic_elements.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\gulp-tasks\inject.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\gulp-tasks\serve.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\gulp-tasks\vendors.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\gulpfile.js" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\index.aspx" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\index.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\charts\chartjs.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\icons\mdi.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\samples\blank-page.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\samples\error-404.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\samples\error-500.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\samples\login.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\samples\register.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\tables\basic-table.aspx" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\tables\basic-table.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\ui-features\buttons.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\pages\ui-features\typography.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\partials\_footer.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\partials\_navbar.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\partials\_sidebar.html" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\screenshot.jpg" />
+    <Content Include="registration.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="snackDisplay.ascx" />
+    <Content Include="test.aspx" />
+    <Content Include="testReg.aspx" />
+    <Content Include="updateProfile.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addToCart.aspx.cs">
+      <DependentUpon>addToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addToCart.aspx.designer.cs">
+      <DependentUpon>addToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartItem.cs" />
+    <Compile Include="changepass.aspx.cs">
+      <DependentUpon>changepass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="changepass.aspx.designer.cs">
+      <DependentUpon>changepass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Display.aspx.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Display.aspx.designer.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="menu.aspx.cs">
+      <DependentUpon>menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu.aspx.designer.cs">
+      <DependentUpon>menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profileDetails.aspx.cs">
+      <DependentUpon>profileDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profileDetails.aspx.designer.cs">
+      <DependentUpon>profileDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\addCategory.aspx.cs">
+      <DependentUpon>addCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\addCategory.aspx.designer.cs">
+      <DependentUpon>addCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\addSnack.aspx.cs">
+      <DependentUpon>addSnack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\addSnack.aspx.designer.cs">
+      <DependentUpon>addSnack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\addSubCategory.aspx.cs">
+      <DependentUpon>addSubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\addSubCategory.aspx.designer.cs">
+      <DependentUpon>addSubCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\pages\tables\basic-table.aspx.cs">
+      <DependentUpon>basic-table.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurpleAdmin-Free-Admin-Template-master\pages\tables\basic-table.aspx.designer.cs">
+      <DependentUpon>basic-table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="snackDisplay.ascx.cs">
+      <DependentUpon>snackDisplay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="snackDisplay.ascx.designer.cs">
+      <DependentUpon>snackDisplay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testReg.aspx.cs">
+      <DependentUpon>testReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testReg.aspx.designer.cs">
+      <DependentUpon>testReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateProfile.aspx.cs">
+      <DependentUpon>updateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateProfile.aspx.designer.cs">
+      <DependentUpon>updateProfile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".vs\restoran-1.0.0\config\applicationhost.config" />
+    <Content Include=".vs\restoran-1.0.0\FileContentIndex\1a27ece8-af62-4514-8967-b3ac70b42a23.vsidx" />
+    <Content Include=".vs\restoran-1.0.0\v17\.wsuo" />
+    <Content Include=".vs\slnx.sqlite" />
+    <Content Include=".vs\VSWorkspaceState.json" />
+    <Content Include="lib\owlcarousel\LICENSE" />
+    <Content Include="lib\waypoints\links.php" />
+    <None Include="packages.config" />
+    <Content Include="scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="scss\bootstrap\scss\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\_badge.scss" />
+    <Content Include="scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\_card.scss" />
+    <Content Include="scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="scss\bootstrap\scss\_close.scss" />
+    <Content Include="scss\bootstrap\scss\_containers.scss" />
+    <Content Include="scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="scss\bootstrap\scss\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\_functions.scss" />
+    <Content Include="scss\bootstrap\scss\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="scss\bootstrap\scss\_images.scss" />
+    <Content Include="scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="scss\bootstrap\scss\_modal.scss" />
+    <Content Include="scss\bootstrap\scss\_nav.scss" />
+    <Content Include="scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\_popover.scss" />
+    <Content Include="scss\bootstrap\scss\_progress.scss" />
+    <Content Include="scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="scss\bootstrap\scss\_root.scss" />
+    <Content Include="scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="scss\bootstrap\scss\_tables.scss" />
+    <Content Include="scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="scss\bootstrap\scss\_type.scss" />
+    <Content Include="scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\_variables.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\.DS_Store" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\css\style.css.map" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_badges.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_bootstrap-progress.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_breadcrumbs.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_buttons.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_cards.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_checkbox-radio.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_dropdown.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_forms.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_icons.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_lists.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_preview.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_tables.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\components\_todo-list.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\landing-screens\_auth.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_animation.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_background.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_badges.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_blockqoute.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_breadcrumbs.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_buttons.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_cards.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_misc.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_pagination.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_popovers.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_text.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\mixins\_tooltips.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\style.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_dashboard.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_demo.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_fonts.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_footer.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_functions.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_layouts.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_misc.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_navbar.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_reset.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_sidebar.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_typography.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_utilities.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_variables.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_vertical-wrapper.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\scss\_widget-grid.scss" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\js\bootstrap.min.js.map" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\CHANGELOG.md" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\LICENSE" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\package.json" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\PSD\Purple_dashboard_free.psd" />
+    <Content Include="PurpleAdmin-Free-Admin-Template-master\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MyIamges\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51881</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44341/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
